@@ -17,13 +17,15 @@ ActiveRecord::Schema.define(version: 20200320192849) do
   end
 
   create_table "listings", force: :cascade do |t|
-    t.string  "address"
-    t.string  "listing_type"
-    t.string  "title"
-    t.string  "description"
-    t.decimal "price"
-    t.integer "neighborhood_id"
-    t.integer "host_id"
+    t.string   "address"
+    t.string   "listing_type"
+    t.string   "title"
+    t.string   "description"
+    t.decimal  "price"
+    t.integer  "neighborhood_id"
+    t.integer  "host_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "neighborhoods", force: :cascade do |t|
@@ -34,8 +36,10 @@ ActiveRecord::Schema.define(version: 20200320192849) do
   create_table "reservations", force: :cascade do |t|
     t.integer  "guest_id"
     t.integer  "listing_id"
-    t.datetime "checkin_time"
-    t.datetime "checkout_time"
+    t.string   "checkin"
+    t.string   "checkout"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "reviews", force: :cascade do |t|

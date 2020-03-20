@@ -9,6 +9,7 @@ class CreateListings < ActiveRecord::Migration[5.0]
         t.decimal :price
         t.integer :neighborhood_id
         t.integer :host_id
+        t.timestamps
       end
   end
 end
