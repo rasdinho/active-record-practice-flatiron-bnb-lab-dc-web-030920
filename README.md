@@ -1,12 +1,18 @@
+## Message to dc-web-030920
+
+Hey all, since we're doing this lab remote, have 1 person in your group (someone with reliable internet) fork and clone this repo down. That person should open up the lab in VS Code and then start a Live Sharing with the rest of the group. **Be sure to push up to github frequently** so everyone has the latest version in case interet goes down
+
 # Flatiron-bnb: Associations
 
 We're going to build Airbnb. Really. We're going to take this in steps. First
 let's work on our model associations and write migrations. This will be
 challenging, but doable. Take it slow and work together. Follow the model specs.
 
-**_Before anything_**, note that when you generate models, controllers, etc,
-be sure to include this option, so that it skips tests (which we already have):
-`--no-test-framework`
+# Flatiron-bnb: Associations
+
+We're going to build Airbnb. Really. We're going to take this in steps. First
+let's work on our model associations and write migrations. This will be
+challenging, but doable. Take it slow and work together. Follow the model specs.
 
 ## Where to Begin
 
