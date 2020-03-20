@@ -1,22 +1,22 @@
+# Flatiron-bnb: Associations
+
 ## Message to dc-web-030920
 
 Hey all, since we're doing this lab remote, have 1 person in your group (someone with reliable internet) fork and clone this repo down. That person should open up the lab in VS Code and then start a Live Sharing with the rest of the group. **Be sure to push up to github frequently** so everyone has the latest version in case interet goes down
 
-# Flatiron-bnb: Associations
+When everyone is good and set up, in your **shared terminal**, run `learn --f-f` to see tests all fail. If that doesn't work, run `rspec --f-f`. Take a good hard look at the tests and read the instructions below to figure out what your domain is. We'll give you a hint, you'll be making 6 files for starters.
 
-We're going to build Airbnb. Really. We're going to take this in steps. First
-let's work on our model associations and write migrations. This will be
-challenging, but doable. Take it slow and work together. Follow the model specs.
+You must create files `city.rb` `listing.rb` `user.rb` `neighborhood.rb` `review.rb` `reservation.rb` in the `app/models`  folder. This is where you'll be writing your ruby classes.
 
-# Flatiron-bnb: Associations
+How these models are all related is up to you all to figure out. Maybe have someone in the group start a shared whiteboard through zoom in your breakout rooms. *Only after you've drawn out all of your models and relationships can you start coding.*
 
-We're going to build Airbnb. Really. We're going to take this in steps. First
-let's work on our model associations and write migrations. This will be
-challenging, but doable. Take it slow and work together. Follow the model specs.
+Take it slow and work together. Follow the model specs. It's possible to complete this lab with no methods in models and to only use Active Record macros ( has_many: and belongs_to: )
 
 ## Where to Begin
 
-First think about the relations between all of the objects. Let's work through
+Work through this lab slowly. For every class you create, you should create a migration file to make a table for that class. Run rake `db:migrate RAILS_ENV=test` to migrate your DB to get the tests to work, and if you make mistakes, run rake `db:migrate:reset RAILS_ENV=test` to start over. You can always open `test.sqlite3`  in DB Browser to look at your test database.
+
+In addition, think about the relations between all of the objects. Let's work through
 Users and Listings, and from there you should know some cool ActiveRecord tricks
 to get started on the rest.
 
@@ -49,6 +49,8 @@ the listings table, otherwise, ActiveRecord is going to default to looking for a
 ```ruby
 has_many :listings, :foreign_key => 'host_id'
 ```
+
+**BEFORE THE END OF THE DAY, PUSH UP THE LATEST CODE TO GITHUB so that everyone in the group has access to the latest code.**
 
 ## Resources
 
